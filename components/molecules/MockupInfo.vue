@@ -89,14 +89,6 @@ export default Vue.extend({
     }
   },
 
-  data() {
-    return {
-      snackbar: false,
-      text: 'My timeout is set to 2000.',
-      timeout: 2000,
-    }
-  },
-
   computed: {
     getMockup(): Product {
       return this.mockup;
