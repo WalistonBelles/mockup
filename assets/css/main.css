@@ -2,7 +2,13 @@
   --white: #f8f9f9;
   --green: #91d568;
   --strong-gray: #7f7f7f;
+  --error-color: #dc3545;
   --black: #000000;
+}
+
+.text-center {
+  text-align: center !important;
+  justify-content: center;
 }
 
 .pb-2 {
@@ -33,6 +39,10 @@
   margin: 10px !important;
 }
 
+.mb-2 {
+  margin-bottom: 10px !important;
+}
+
 .mt-2 {
   margin-top: 10px !important;
 }
@@ -42,6 +52,16 @@
 }
 
 .btn {
+  text-transform: none !important;
+  font-weight: bold !important;
+  border-radius: 10px !important;
+  letter-spacing: 0;
+  min-width: 150px !important;
+  border: 1px solid var(--strong-gray) !important;
+}
+
+.btn-strong {
+  font-size: 16px !important;
   text-transform: none !important;
   font-weight: bold !important;
   border-radius: 10px !important;
@@ -71,4 +91,22 @@
   display: grid;
   justify-content: center;
   align-items: center;
+}
+
+.out-stock {
+  color: var(--error-color) !important;
+  font-weight: bold !important;
+}
+
+.v-chip.v-chip--outlined.v-chip.v-chip { 
+  background-color: var(--error-color) !important;
+}
+
+.mockup-badge {
+  margin-top: -50px !important;
+  margin-left: 10px !important;
+}
+
+.align-end {
+  align-items: flex-end!important;
 }

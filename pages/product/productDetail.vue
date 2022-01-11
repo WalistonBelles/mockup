@@ -1,11 +1,13 @@
 <template>
-  <ProductTemplate />
+  <ProductTemplate
+    :is_detail="true"
+  />
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
 export default Vue.extend({
-  name: 'IndexPage',
+  name: 'ProductDetailPage',
 })
 </script>

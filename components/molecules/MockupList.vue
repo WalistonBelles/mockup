@@ -20,6 +20,7 @@
         color="success"
         outlined
         text
+        @click="openDetails(getMockup)"
       >
         View Details
       </v-btn>
@@ -29,6 +30,8 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { Product } from '@/models'
+
 export default Vue.extend({
   props: {
     mockup: {
@@ -40,6 +43,14 @@ export default Vue.extend({
   computed: {
     getMockup(): Object {
       return this.mockup;
+    }
+  },
+
+  methods: {
+    openDetails(product: Product): void {
+      if (product && product.ProductID) {
+        this.$router.push('/product/' + product.ProductID)
+      }
     }
   }
 })
