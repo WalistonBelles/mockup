@@ -19,6 +19,7 @@
       "@nuxt/types", 
       "@types/node",
       "@nuxtjs/vuetify",
+      "@nuxtjs/toast"
     ]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]

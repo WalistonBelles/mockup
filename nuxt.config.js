@@ -34,6 +34,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/toast',
     '@nuxtjs/vuetify',
     [
       '@nuxtjs/router',
@@ -45,6 +46,10 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
+
+  toast: {
+    position: 'bottom-right',
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

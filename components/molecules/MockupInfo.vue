@@ -45,11 +45,14 @@
           <span v-if="getMockup.Stock === 0" class="out-stock">
             Out Stock
           </span>
+
+          <br>
           <v-btn
             class="btn-strong btn-success ma-2"
             color="success"
             outlined
             text
+            @click="addToCart()"
           >
             Add to Cart
           </v-btn>
@@ -86,6 +89,14 @@ export default Vue.extend({
     }
   },
 
+  data() {
+    return {
+      snackbar: false,
+      text: 'My timeout is set to 2000.',
+      timeout: 2000,
+    }
+  },
+
   computed: {
     getMockup(): Product {
       return this.mockup;
@@ -102,6 +113,19 @@ export default Vue.extend({
     back(): void {
       this.$router.push('/products');
     },
+
+    addToCart(this: any) {
+      this.$toast.success(
+        'Product added successfully',
+        {
+          keepOnHover: true,
+          position: 'top-center',
+          duration: 3000,
+          fullWidth: true,
+          theme: "toasted-primary",
+        }
+      )
+    }
   }
 })
 </script>
